@@ -22,9 +22,9 @@
 		3C3045831889856D00077EA4 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3C3045621889856D00077EA4 /* UIKit.framework */; };
 		3C30458B1889856D00077EA4 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 3C3045891889856D00077EA4 /* InfoPlist.strings */; };
 		3C30458D1889856D00077EA4 /* ABFullScrollViewControllerExampleTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 3C30458C1889856D00077EA4 /* ABFullScrollViewControllerExampleTests.m */; };
-		3C3045991889871F00077EA4 /* ABFullScrollViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3C3045981889871F00077EA4 /* ABFullScrollViewController.m */; };
 		3C30459C1889947200077EA4 /* background@2x.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 3C30459B1889947200077EA4 /* background@2x.jpg */; };
 		3C30459E188996E700077EA4 /* background@2x~ipad.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 3C30459D188996E700077EA4 /* background@2x~ipad.jpg */; };
+		3C3045A21889A02900077EA4 /* ABFullScrollViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3C3045A11889A02900077EA4 /* ABFullScrollViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -58,10 +58,10 @@
 		3C3045881889856D00077EA4 /* ABFullScrollViewControllerExampleTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "ABFullScrollViewControllerExampleTests-Info.plist"; sourceTree = "<group>"; };
 		3C30458A1889856D00077EA4 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		3C30458C1889856D00077EA4 /* ABFullScrollViewControllerExampleTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ABFullScrollViewControllerExampleTests.m; sourceTree = "<group>"; };
-		3C3045971889871F00077EA4 /* ABFullScrollViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ABFullScrollViewController.h; sourceTree = "<group>"; };
-		3C3045981889871F00077EA4 /* ABFullScrollViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ABFullScrollViewController.m; sourceTree = "<group>"; };
 		3C30459B1889947200077EA4 /* background@2x.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "background@2x.jpg"; sourceTree = "<group>"; };
 		3C30459D188996E700077EA4 /* background@2x~ipad.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "background@2x~ipad.jpg"; sourceTree = "<group>"; };
+		3C3045A01889A02900077EA4 /* ABFullScrollViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ABFullScrollViewController.h; sourceTree = "<group>"; };
+		3C3045A11889A02900077EA4 /* ABFullScrollViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ABFullScrollViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -91,7 +91,7 @@
 		3C3045521889856C00077EA4 = {
 			isa = PBXGroup;
 			children = (
-				3C3045961889871F00077EA4 /* ABFullScrollViewController */,
+				3C30459F1889A02900077EA4 /* ABFullScrollViewController */,
 				3C3045641889856D00077EA4 /* ABFullScrollViewControllerExample */,
 				3C3045861889856D00077EA4 /* ABFullScrollViewControllerExampleTests */,
 				3C30455D1889856D00077EA4 /* Frameworks */,
@@ -164,15 +164,6 @@
 			name = "Supporting Files";
 			sourceTree = "<group>";
 		};
-		3C3045961889871F00077EA4 /* ABFullScrollViewController */ = {
-			isa = PBXGroup;
-			children = (
-				3C3045971889871F00077EA4 /* ABFullScrollViewController.h */,
-				3C3045981889871F00077EA4 /* ABFullScrollViewController.m */,
-			);
-			path = ABFullScrollViewController;
-			sourceTree = "<group>";
-		};
 		3C30459A1889947200077EA4 /* Assets */ = {
 			isa = PBXGroup;
 			children = (
@@ -180,6 +171,16 @@
 				3C30459B1889947200077EA4 /* background@2x.jpg */,
 			);
 			path = Assets;
+			sourceTree = "<group>";
+		};
+		3C30459F1889A02900077EA4 /* ABFullScrollViewController */ = {
+			isa = PBXGroup;
+			children = (
+				3C3045A01889A02900077EA4 /* ABFullScrollViewController.h */,
+				3C3045A11889A02900077EA4 /* ABFullScrollViewController.m */,
+			);
+			name = ABFullScrollViewController;
+			path = ../ABFullScrollViewController;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -285,7 +286,7 @@
 				3C3045781889856D00077EA4 /* ViewController.m in Sources */,
 				3C30456F1889856D00077EA4 /* AppDelegate.m in Sources */,
 				3C30456B1889856D00077EA4 /* main.m in Sources */,
-				3C3045991889871F00077EA4 /* ABFullScrollViewController.m in Sources */,
+				3C3045A21889A02900077EA4 /* ABFullScrollViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
