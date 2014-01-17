@@ -55,9 +55,9 @@ For the last, you need to link in .xib file the tableViewDelegate, the toolbar a
 ![alt tag](https://raw2.github.com/andresbrun/ABFullScrollViewController/master/ABFullScrollViewControllerExample/Demo/instructions_1.png)
 
 ## Notes
-	 - This component uses scrollViewDidScroll:, scrollViewDidEndDragging: willDecelerate: and scrollViewDidEndDecelerating so if you need to implment it in you class remember to call the super of it ;).
+- This component uses scrollViewDidScroll:, scrollViewDidEndDragging: willDecelerate: and scrollViewDidEndDecelerating so if you need to implment it in you class remember to call the super of it ;).
 
-	 - This component doesn't work fine with Autolayout :(.
+- This component doesn't work fine with Autolayout :(.
 
 ## Examples
 
