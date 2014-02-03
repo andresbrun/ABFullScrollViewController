@@ -8,8 +8,11 @@
 
 #import "ABFullScrollViewController.h"
 
+#define CURRENT_VERSION [[[UIDevice currentDevice] systemVersion] floatValue]
+#define IS_EARLIER_IOS7 ( CURRENT_VERSION < 7.0) //when compile for iOS 7 uncomment this
+
 #define DEFAULT_HEADER_HEIGHT 44
-#define STATUS_BAR_HEIGHT 20
+#define STATUS_BAR_HEIGHT IS_EARLIER_IOS7?0:20
 
 #define HEADER_VIEW_TAG 12221
 
