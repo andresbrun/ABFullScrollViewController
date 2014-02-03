@@ -85,6 +85,12 @@
 }
 
 #pragma mark - UIScrollView Delegates
+- (void)scrollViewDidScrollToTop:(UIScrollView *)scrollView
+{
+    float delta = _previousYOffset-scrollView.contentOffset.y;
+    [self moveHeaderToY:delta];
+}
+
 - (void)scrollViewWillBeginDragging:(UIScrollView *)scrollView
 {
     _dragging=YES;
@@ -102,17 +108,7 @@
         if(yCurrentOffset>_initialYContentOffset){
             
             float delta = _previousYOffset-yCurrentOffset;
-            float toolbarInitialY = -self.toolbar.frame.size.height+[self minHeightWithoutHide];
-            
-            //Move the toolbar inside the bounds
-            CGRect rect = self.toolbar.frame;
-            rect.origin.y =MAX(MIN(self.toolbar.frame.origin.y + delta, 0), toolbarInitialY);
-            [self.toolbar setFrame:rect];
-            
-            //Fit the alpha of headerView
-            [self keyframeAnimationForHeaderView:self.headerView
-                                        withStep:1-(self.toolbar.frame.origin.y/toolbarInitialY)];
-            
+            [self moveHeaderToY:self.toolbar.frame.origin.y + delta];
         }
         _previousYOffset = yCurrentOffset;
     }
@@ -131,6 +127,20 @@
 
 
 #pragma mark - Private methods
+- (void) moveHeaderToY: (float) y
+{
+    float toolbarInitialY = -self.toolbar.frame.size.height+[self minHeightWithoutHide];
+    
+    //Move the toolbar inside the bounds
+    CGRect rect = self.toolbar.frame;
+    rect.origin.y =MAX(MIN(y, 0), toolbarInitialY);
+    [self.toolbar setFrame:rect];
+    
+    //Fit the alpha of headerView
+    [self keyframeAnimationForHeaderView:self.headerView
+                                withStep:1-(self.toolbar.frame.origin.y/toolbarInitialY)];
+}
+
 - (UIView *) createDefaultHeaderView
 {
     UIView *view = [[UIView alloc] initWithFrame:CGRectMake(0, 0, self.view.frame.size.width, DEFAULT_HEADER_HEIGHT)];
