@@ -1,3 +1,6 @@
+[![License MIT](https://go-shields.herokuapp.com/license-MIT-blue.png)](https://github.com/andresbrun/ABFullScrollViewController/blob/master/LICENSE)
+[![Build Status](https://travis-ci.org/andresbrun/ABFullScrollViewController.png?branch=master)](https://github.com/andresbrun/ABFullScrollViewController)
+
 ABFullScrollViewController
 ==========================
 
