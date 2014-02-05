@@ -1,8 +1,8 @@
-[![License MIT](https://go-shields.herokuapp.com/license-MIT-blue.png)](https://github.com/andresbrun/ABFullScrollViewController/blob/master/LICENSE)
-[![Build Status](https://travis-ci.org/andresbrun/ABFullScrollViewController.png?branch=master)](https://github.com/andresbrun/ABFullScrollViewController)
-
 ABFullScrollViewController
 ==========================
+[![License MIT](https://go-shields.herokuapp.com/license-MIT-blue.png)](https://github.com/andresbrun/ABFullScrollViewController/blob/master/LICENSE)
+[![Build Status](https://travis-ci.org/andresbrun/ABFullScrollViewController.png?branch=master)](https://github.com/andresbrun/ABFullScrollViewController)
+[![Bitdeli Badge](https://d2weczhvl823v0.cloudfront.net/andresbrun/abfullscrollviewcontroller/trend.png)](https://bitdeli.com/free "Bitdeli Badge")
 
 Subclass of ViewController that provide the behaviour of hide the toolbar when user makes scroll in a UITableView. 
 
@@ -69,7 +69,3 @@ For the last, you need to link in .xib file the tableViewDelegate, the toolbar a
 ## License
 
 ABFullScrollViewController is available under the MIT license. See the LICENSE file for more info.
-
-
-[![Bitdeli Badge](https://d2weczhvl823v0.cloudfront.net/andresbrun/abfullscrollviewcontroller/trend.png)](https://bitdeli.com/free "Bitdeli Badge")
-
