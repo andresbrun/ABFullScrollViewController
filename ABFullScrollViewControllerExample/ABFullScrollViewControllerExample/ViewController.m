@@ -79,7 +79,7 @@
         
     }
     
-    [cell.textLabel setText:[NSString stringWithFormat:@"Cell %d", indexPath.row]];
+    [cell.textLabel setText:[NSString stringWithFormat:@"Cell %ld", (long)indexPath.row]];
     [cell.textLabel setTextColor:[UIColor colorWithWhite:1-(indexPath.row/40.0) alpha:1]];
     [cell setBackgroundColor:[UIColor colorWithWhite:indexPath.row/40.0 alpha:1]];
     
