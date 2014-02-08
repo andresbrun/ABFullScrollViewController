@@ -2,7 +2,8 @@ ABFullScrollViewController
 ==========================
 [![License MIT](https://go-shields.herokuapp.com/license-MIT-blue.png)](https://github.com/andresbrun/ABFullScrollViewController/blob/master/LICENSE)
 [![Build Status](https://travis-ci.org/andresbrun/ABFullScrollViewController.png?branch=master)](https://github.com/andresbrun/ABFullScrollViewController)
-[![Bitdeli Badge](https://d2weczhvl823v0.cloudfront.net/andresbrun/abfullscrollviewcontroller/trend.png)](https://bitdeli.com/free "Bitdeli Badge")
+[![Build Platform](https://cocoapod-badges.herokuapp.com/p/ABFullScrollViewController/badge.png)](https://github.com/andresbrun/ABFullScrollViewController)
+[![Build Version](https://cocoapod-badges.herokuapp.com/v/ABFullScrollViewController/badge.png)](https://github.com/andresbrun/ABFullScrollViewController)
 
 Subclass of ViewController that provide the behaviour of hide the toolbar when user makes scroll in a UITableView. 
 
