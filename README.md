@@ -7,6 +7,16 @@ ABFullScrollViewController
 
 Subclass of ViewController that provide the behaviour of hide the toolbar when user makes scroll in a UITableView. 
 
+### Installation with CocoaPods
+
+[CocoaPods](http://cocoapods.org) is a dependency manager for Objective-C, which automates and simplifies the process of using 3rd-party libraries like ABFullScrollViewController in your projects. See the ["Getting Started" guide for more information](https://github.com/AFNetworking/AFNetworking/wiki/Getting-Started-with-AFNetworking).
+
+#### Podfile
+
+```ruby
+pod "ABFullScrollViewController"
+```
+
 ### Installation 
 For install this component you only need to download the ABFullScrollViewController folder and copy it into your proyect. Then you need to inherate your view controller of ABFullScrollViewController:
 
