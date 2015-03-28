@@ -6,9 +6,9 @@
 //  Copyright (c) 2015 Brun's Software. All rights reserved.
 //
 
-#import "MultiplexerProxyBehavior.h"
+#import "ABMMultiplexerProxyBehavior.h"
 
-@implementation MultiplexerProxyBehavior
+@implementation ABMMultiplexerProxyBehavior
 
 - (NSMethodSignature *)methodSignatureForSelector:(SEL)sel {
     NSMethodSignature *sig = [super methodSignatureForSelector:sel];

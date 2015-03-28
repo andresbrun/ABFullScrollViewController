@@ -21,7 +21,7 @@
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="background.jpg" translatesAutoresizingMaskIntoConstraints="NO" id="Niw-GQ-EcM">
                                 <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                             </imageView>
-                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" translatesAutoresizingMaskIntoConstraints="NO" id="hUx-9w-smu">
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" allowsSelection="NO" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" translatesAutoresizingMaskIntoConstraints="NO" id="hUx-9w-smu">
                                 <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                 <connections>
@@ -86,6 +86,9 @@
                             </mask>
                         </variation>
                     </view>
+                    <connections>
+                        <outlet property="headerContainerView" destination="zCz-cf-UDz" id="n6P-JF-Fq6"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="C1A-0S-5Nr" sceneMemberID="firstResponder"/>
                 <customObject id="HiZ-IR-zfh" customClass="ABMFullScrollBehavior">
@@ -96,17 +99,19 @@
                         <userDefinedRuntimeAttribute type="boolean" keyPath="imantate" value="YES"/>
                     </userDefinedRuntimeAttributes>
                     <connections>
+                        <outlet property="delegate" destination="Mno-4d-OyZ" id="oLj-ph-WDy"/>
                         <outlet property="headerView" destination="ltp-Mz-lDc" id="4gg-DH-V49"/>
                         <outlet property="scrollView" destination="hUx-9w-smu" id="u0p-3R-kDL"/>
                     </connections>
                 </customObject>
-                <customObject id="3Lo-D8-LMj" customClass="MultiplexerProxyBehavior">
+                <customObject id="3Lo-D8-LMj" customClass="ABMMultiplexerProxyBehavior">
                     <connections>
                         <outletCollection property="targets" destination="Mno-4d-OyZ" id="OSk-X1-QSh"/>
                         <outletCollection property="targets" destination="HiZ-IR-zfh" id="7qz-ir-rJW"/>
                     </connections>
                 </customObject>
             </objects>
+            <point key="canvasLocation" x="406" y="376"/>
         </scene>
     </scenes>
     <resources>

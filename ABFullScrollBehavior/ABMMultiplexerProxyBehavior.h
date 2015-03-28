@@ -8,7 +8,7 @@
 
 #import <Foundation/Foundation.h>
 
-@interface MultiplexerProxyBehavior : NSObject
+@interface ABMMultiplexerProxyBehavior : NSObject
 
 //! targets to propagate messages to
 @property(nonatomic, strong) IBOutletCollection(id) NSArray *targets;

@@ -9,7 +9,8 @@
 #import <Foundation/Foundation.h>
 
 @protocol ABMFullScrollBehaviorDelegate <NSObject>
-- (void)keyframeAnimationForHeaderView:(UIView *) view percent:(CGFloat)step;
+- (void)scroll:(UIScrollView *)scroll animationForHeaderView:(UIView *)view percent:(CGFloat)percent
+;
 @end
 
 @interface ABMFullScrollBehavior : NSObject <UIScrollViewDelegate>
@@ -20,6 +21,6 @@
 @property (weak, nonatomic) IBOutlet UIScrollView *scrollView;
 @property (weak, nonatomic) IBOutlet UIView *headerView;
 
-@property (weak) id<ABMFullScrollBehaviorDelegate> delegate;
+@property (weak) IBOutlet id<ABMFullScrollBehaviorDelegate> delegate;
 
 @end

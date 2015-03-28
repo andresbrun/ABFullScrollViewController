@@ -70,7 +70,6 @@
 }
 
 - (void)scrollViewWillEndDragging:(UIScrollView *)scrollView withVelocity:(CGPoint)velocity targetContentOffset:(inout CGPoint *)targetContentOffset {
-    NSLog(@"scrollViewWillEndDragging.");
     self.dragging=NO;
 
     if (velocity.y == 0) {
@@ -82,7 +81,6 @@
 }
 
 - (void)scrollViewDidEndDecelerating:(UIScrollView *)scrollView {
-    NSLog(@"scrollViewDidEndDecelerating.");
     self.previousYOffset=scrollView.contentOffset.y;
     
     [self imantateToNearPosition];
@@ -99,7 +97,10 @@
 
 - (void)moveHeaderToY:(CGFloat)y {
     [self moveHeaderInsideBoundToY:y];
-    [self.delegate keyframeAnimationForHeaderView:self.headerView percent:[self currentHeaderProgress]];
+    
+    if ([self.delegate respondsToSelector:@selector(scroll:animationForHeaderView:percent:)]) {
+        [self.delegate scroll:self.scrollView animationForHeaderView:self.headerView percent:[self currentHeaderProgress]];
+    }
 }
 
 - (void)moveHeaderInsideBoundToY:(CGFloat)y {

@@ -11,6 +11,7 @@
 const CGFloat headerStandardHeight = 60;
 
 @interface ViewController ()
+@property (weak, nonatomic) IBOutlet UIView *headerContainerView;
 
 @end
 
@@ -24,7 +25,7 @@ const CGFloat headerStandardHeight = 60;
 -(UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
     UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"Cell"];
     
-    if(cell==nil){
+    if(cell==nil) {
         cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleValue1 reuseIdentifier:@"Cell"];
     }
     
@@ -41,6 +42,14 @@ const CGFloat headerStandardHeight = 60;
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
     return 40;
+}
+
+#pragma mark - ABMFullScroll Delegates
+- (void)scroll:(UIScrollView *)scroll animationForHeaderView:(UIView *)view percent:(CGFloat)percent {
+    [self.headerContainerView setAlpha:percent];
+    
+    CGFloat transform = MIN(percent+0.5, 1);
+    [self.headerContainerView setTransform:CGAffineTransformMakeScale(transform, transform)];
 }
 
 @end
