@@ -9,6 +9,6 @@
 #import <UIKit/UIKit.h>
 #import "ABFullScrollViewController.h"
 
-@interface ViewController : ABFullScrollViewController <UITableViewDataSource>
+@interface ViewController : UIViewController <UITableViewDataSource, UITableViewDelegate>
 
 @end

@@ -25,6 +25,9 @@
 		3C30459C1889947200077EA4 /* background@2x.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 3C30459B1889947200077EA4 /* background@2x.jpg */; };
 		3C30459E188996E700077EA4 /* background@2x~ipad.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 3C30459D188996E700077EA4 /* background@2x~ipad.jpg */; };
 		3C3045A21889A02900077EA4 /* ABFullScrollViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3C3045A11889A02900077EA4 /* ABFullScrollViewController.m */; };
+		DDC596F01AC6D29A00908BAE /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DDC596EF1AC6D29A00908BAE /* Main.storyboard */; };
+		DDC596F41AC6D56800908BAE /* ABMFullScrollBehavior.m in Sources */ = {isa = PBXBuildFile; fileRef = DDC596F31AC6D56800908BAE /* ABMFullScrollBehavior.m */; };
+		DDC596F71AC6D70300908BAE /* MultiplexerProxyBehavior.m in Sources */ = {isa = PBXBuildFile; fileRef = DDC596F61AC6D70300908BAE /* MultiplexerProxyBehavior.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -62,6 +65,11 @@
 		3C30459D188996E700077EA4 /* background@2x~ipad.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "background@2x~ipad.jpg"; sourceTree = "<group>"; };
 		3C3045A01889A02900077EA4 /* ABFullScrollViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ABFullScrollViewController.h; sourceTree = "<group>"; };
 		3C3045A11889A02900077EA4 /* ABFullScrollViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ABFullScrollViewController.m; sourceTree = "<group>"; };
+		DDC596EF1AC6D29A00908BAE /* Main.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Main.storyboard; sourceTree = "<group>"; };
+		DDC596F21AC6D56800908BAE /* ABMFullScrollBehavior.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ABMFullScrollBehavior.h; sourceTree = "<group>"; };
+		DDC596F31AC6D56800908BAE /* ABMFullScrollBehavior.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ABMFullScrollBehavior.m; sourceTree = "<group>"; };
+		DDC596F51AC6D70300908BAE /* MultiplexerProxyBehavior.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MultiplexerProxyBehavior.h; sourceTree = "<group>"; };
+		DDC596F61AC6D70300908BAE /* MultiplexerProxyBehavior.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MultiplexerProxyBehavior.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -91,6 +99,7 @@
 		3C3045521889856C00077EA4 = {
 			isa = PBXGroup;
 			children = (
+				DDC596F11AC6D54500908BAE /* ABMFullScrollBehavior */,
 				3C30459F1889A02900077EA4 /* ABFullScrollViewController */,
 				3C3045641889856D00077EA4 /* ABFullScrollViewControllerExample */,
 				3C3045861889856D00077EA4 /* ABFullScrollViewControllerExampleTests */,
@@ -127,6 +136,7 @@
 				3C30456E1889856D00077EA4 /* AppDelegate.m */,
 				3C3045701889856D00077EA4 /* Main_iPhone.storyboard */,
 				3C3045731889856D00077EA4 /* Main_iPad.storyboard */,
+				DDC596EF1AC6D29A00908BAE /* Main.storyboard */,
 				3C3045761889856D00077EA4 /* ViewController.h */,
 				3C3045771889856D00077EA4 /* ViewController.m */,
 				3C3045791889856D00077EA4 /* Images.xcassets */,
@@ -181,6 +191,18 @@
 			);
 			name = ABFullScrollViewController;
 			path = ../ABFullScrollViewController;
+			sourceTree = "<group>";
+		};
+		DDC596F11AC6D54500908BAE /* ABMFullScrollBehavior */ = {
+			isa = PBXGroup;
+			children = (
+				DDC596F21AC6D56800908BAE /* ABMFullScrollBehavior.h */,
+				DDC596F31AC6D56800908BAE /* ABMFullScrollBehavior.m */,
+				DDC596F51AC6D70300908BAE /* MultiplexerProxyBehavior.h */,
+				DDC596F61AC6D70300908BAE /* MultiplexerProxyBehavior.m */,
+			);
+			name = ABMFullScrollBehavior;
+			path = ../ABFullScrollBehavior;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -259,6 +281,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				DDC596F01AC6D29A00908BAE /* Main.storyboard in Resources */,
 				3C3045751889856D00077EA4 /* Main_iPad.storyboard in Resources */,
 				3C30457A1889856D00077EA4 /* Images.xcassets in Resources */,
 				3C3045721889856D00077EA4 /* Main_iPhone.storyboard in Resources */,
@@ -284,6 +307,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				3C3045781889856D00077EA4 /* ViewController.m in Sources */,
+				DDC596F41AC6D56800908BAE /* ABMFullScrollBehavior.m in Sources */,
+				DDC596F71AC6D70300908BAE /* MultiplexerProxyBehavior.m in Sources */,
 				3C30456F1889856D00077EA4 /* AppDelegate.m in Sources */,
 				3C30456B1889856D00077EA4 /* main.m in Sources */,
 				3C3045A21889A02900077EA4 /* ABFullScrollViewController.m in Sources */,
@@ -505,6 +530,7 @@
 				3C3045921889856D00077EA4 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		3C3045931889856D00077EA4 /* Build configuration list for PBXNativeTarget "ABFullScrollViewControllerExampleTests" */ = {
 			isa = XCConfigurationList;
@@ -513,6 +539,7 @@
 				3C3045951889856D00077EA4 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

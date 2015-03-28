@@ -8,13 +8,8 @@
 
 #import "ABFullScrollViewController.h"
 
-#define CURRENT_VERSION [[[UIDevice currentDevice] systemVersion] floatValue]
-#define IS_EARLIER_IOS7 ( CURRENT_VERSION < 7.0) //when compile for iOS 7 uncomment this
-
-#define DEFAULT_HEADER_HEIGHT 44
-#define STATUS_BAR_HEIGHT IS_EARLIER_IOS7?0:20
-
-#define HEADER_VIEW_TAG 12221
+const CGFloat defaultHeaderHeight = 44;
+const CGFloat statusBarHeight = 20;
 
 @interface ABFullScrollViewController (){
     float _initialYContentOffset;
@@ -25,36 +20,24 @@
 }
 
 @property (strong, nonatomic) UIView *headerView;
-
 @end
 
 @implementation ABFullScrollViewController
 
-- (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
-{
-    self = [super initWithNibName:nibNameOrNil bundle:nibBundleOrNil];
-    if (self) {
-        // Custom initialization
-    }
-    return self;
-}
-
-- (void)viewDidLoad
-{
+- (void)viewDidLoad {
     [super viewDidLoad];
-	// Do any additional setup after loading the view.
-    
     [self.tableView setDelegate:self];
 }
 
-- (void)viewWillAppear:(BOOL)animated
-{
+- (void)viewWillAppear:(BOOL)animated {
     [super viewWillAppear:animated];
+    
+    NSUInteger headerViewTmpTag = 1001;
     
     if (self.tableView) {
         
         self.headerView = [self headerView:[self createDefaultHeaderView] forTableView:self.tableView];
-        [self.headerView setTag:HEADER_VIEW_TAG];
+        [self.headerView setTag:headerViewTmpTag];
         
         _headerViewHeight = [self headerHeightForTableView:self.tableView];
         
@@ -65,7 +48,7 @@
         _previousYOffset = _initialYContentOffset;
     }
     
-    if(self.toolbar){
+    if(self.toolbar) {
         [self.toolbar setBarTintColor:[self toolbarBackgroundColor]];
         [self.toolbar setFrame:CGRectMake(0,
                                           0,
@@ -73,7 +56,7 @@
                                           _headerViewHeight)];
         
         if(self.headerView){
-            [[self.toolbar viewWithTag:HEADER_VIEW_TAG] removeFromSuperview];
+            [[self.toolbar viewWithTag:headerViewTmpTag] removeFromSuperview];
             [self.toolbar addSubview:self.headerView];
             [self.headerView setAlpha:1.0];
         }
@@ -81,26 +64,17 @@
     }
 }
 
-- (void)didReceiveMemoryWarning
-{
-    [super didReceiveMemoryWarning];
-    // Dispose of any resources that can be recreated.
-}
-
 #pragma mark - UIScrollView Delegates
-- (void)scrollViewDidScrollToTop:(UIScrollView *)scrollView
-{
+- (void)scrollViewDidScrollToTop:(UIScrollView *)scrollView {
     float delta = _previousYOffset-scrollView.contentOffset.y;
     [self moveHeaderToY:delta];
 }
 
-- (void)scrollViewWillBeginDragging:(UIScrollView *)scrollView
-{
+- (void)scrollViewWillBeginDragging:(UIScrollView *)scrollView {
     _dragging=YES;
 }
 
-- (void)scrollViewDidScroll:(UIScrollView *)scrollView
-{
+- (void)scrollViewDidScroll:(UIScrollView *)scrollView {
     
     if(self.toolbar && _dragging){
         
@@ -115,23 +89,18 @@
         }
         _previousYOffset = yCurrentOffset;
     }
-    
 }
 
-- (void)scrollViewDidEndDragging:(UIScrollView *)scrollView willDecelerate:(BOOL)decelerate
-{
+- (void)scrollViewDidEndDragging:(UIScrollView *)scrollView willDecelerate:(BOOL)decelerate {
     _dragging=NO;
 }
 
-- (void)scrollViewDidEndDecelerating:(UIScrollView *)scrollView
-{
+- (void)scrollViewDidEndDecelerating:(UIScrollView *)scrollView {
     _previousYOffset=scrollView.contentOffset.y;
 }
 
-
 #pragma mark - Private methods
-- (void) moveHeaderToY: (float) y
-{
+- (void) moveHeaderToY:(float)y {
     float toolbarInitialY = -self.toolbar.frame.size.height+[self minHeightWithoutHide];
     
     //Move the toolbar inside the bounds
@@ -144,38 +113,33 @@
                                 withStep:1-(self.toolbar.frame.origin.y/toolbarInitialY)];
 }
 
-- (UIView *) createDefaultHeaderView
-{
-    UIView *view = [[UIView alloc] initWithFrame:CGRectMake(0, 0, self.view.frame.size.width, DEFAULT_HEADER_HEIGHT)];
+- (UIView *) createDefaultHeaderView {
+    UIView *view = [[UIView alloc] initWithFrame:CGRectMake(0, 0, self.view.frame.size.width, defaultHeaderHeight)];
     [view setBackgroundColor:[UIColor clearColor]];
     return view;
-    
 }
+
 #pragma mark - Polymorph methods
--(UIView *) headerView:(UIView *)view forTableView:(UITableView *)tableView
-{
+-(UIView *) headerView:(UIView *)view forTableView:(UITableView *)tableView {
     return view;
 }
 
--(float) headerHeightForTableView:(UITableView *)tableView
-{
-    return DEFAULT_HEADER_HEIGHT;
+-(float) headerHeightForTableView:(UITableView *)tableView {
+    return defaultHeaderHeight;
 }
 
-- (UIColor *) toolbarBackgroundColor
-{
+- (UIColor *) toolbarBackgroundColor {
     return self.tableView.backgroundColor;
 }
 
-- (float) minHeightWithoutHide
-{
-    return STATUS_BAR_HEIGHT;
+- (float) minHeightWithoutHide {
+    return statusBarHeight;
 }
 
-- (void) keyframeAnimationForHeaderView: (UIView *) view withStep: (float)step
-{
+- (void) keyframeAnimationForHeaderView: (UIView *) view withStep: (float)step {
     if(self.headerView){
         [self.headerView setAlpha:step];
     }
 }
+
 @end
