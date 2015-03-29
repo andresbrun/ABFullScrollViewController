@@ -11,6 +11,7 @@
 
 @interface ABMFullScrollBehavior ()
 
+@property(nonatomic, strong) NSNumber *initialYPosition;
 @property(nonatomic, assign) CGFloat initialYContentOffset;
 @property(nonatomic, assign) CGFloat previousYOffset;
 @property(nonatomic, assign) BOOL dragging;
@@ -49,11 +50,13 @@
 }
 
 - (void)scrollViewWillBeginDragging:(UIScrollView *)scrollView {
+    if (!self.initialYPosition) {
+        self.initialYPosition = @(CGRectGetMinY(self.headerView.frame));
+    }
     self.dragging = YES;
 }
 
 - (void)scrollViewDidScroll:(UIScrollView *)scrollView {
-    
     if(self.headerView && self.dragging) {
         
         //Move toolbar
@@ -73,7 +76,7 @@
     self.dragging=NO;
 
     if (velocity.y == 0) {
-        self.draggingScrollDown = [self currentHeaderProgress] < 0.5;
+        self.draggingScrollDown = [self currentHeaderPositionPercent] < 0.5;
         [self imantateToNearPosition];
     } else {
         self.draggingScrollDown = velocity.y > 0;
@@ -81,7 +84,7 @@
 }
 
 - (void)scrollViewDidEndDecelerating:(UIScrollView *)scrollView {
-    self.previousYOffset=scrollView.contentOffset.y;
+    self.previousYOffset = scrollView.contentOffset.y;
     
     [self imantateToNearPosition];
 }
@@ -90,7 +93,7 @@
 - (void)imantateToNearPosition {
     if (self.imantate) {
         [UIView animateWithDuration:0.1 animations:^{
-            [self moveHeaderToY:self.draggingScrollDown ? [self headerViewInitialYPos] : 0];
+            [self moveHeaderToY:self.draggingScrollDown ? [self headerViewInitialYPos] : [self headerViewFinalYPos]];
         }];
     }
 }
@@ -99,22 +102,26 @@
     [self moveHeaderInsideBoundToY:y];
     
     if ([self.delegate respondsToSelector:@selector(scroll:animationForHeaderView:percent:)]) {
-        [self.delegate scroll:self.scrollView animationForHeaderView:self.headerView percent:[self currentHeaderProgress]];
+        [self.delegate scroll:self.scrollView animationForHeaderView:self.headerView percent:[self currentHeaderPositionPercent]];
     }
 }
 
 - (void)moveHeaderInsideBoundToY:(CGFloat)y {
-    CGRect rect= self.headerView.frame;
-    rect.origin.y= MAX(MIN(y, 0), [self headerViewInitialYPos]);
+    CGRect rect = self.headerView.frame;
+    rect.origin.y = MAX(MIN(y, [self headerViewFinalYPos]), [self headerViewInitialYPos]);
     [self.headerView setFrame:rect];
 }
 
 - (CGFloat)headerViewInitialYPos {
-    return self.minVisibleHeight - self.headerView.frame.size.height;
+    return [self.initialYPosition floatValue] +  self.minVisibleHeight - self.headerView.frame.size.height;
 }
 
-- (CGFloat)currentHeaderProgress {
-    return 1.0 - (self.headerView.frame.origin.y/[self headerViewInitialYPos]);
+- (CGFloat)headerViewFinalYPos {
+    return [self.initialYPosition floatValue];
+}
+
+- (CGFloat)currentHeaderPositionPercent {
+    return 1.0 - ((self.headerView.frame.origin.y - [self headerViewFinalYPos])/([self headerViewInitialYPos] - [self headerViewFinalYPos]));
 }
 
 @end
