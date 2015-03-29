@@ -8,7 +8,8 @@
 
 #import <UIKit/UIKit.h>
 #import "ABFullScrollViewController.h"
+#import "ABMFullScrollBehavior.h"
 
-@interface ViewController : ABFullScrollViewController <UITableViewDataSource>
+@interface ViewController : UIViewController <UITableViewDataSource, UITableViewDelegate, ABMFullScrollBehaviorDelegate>
 
 @end

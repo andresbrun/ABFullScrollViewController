@@ -13,8 +13,6 @@
 		3C3045691889856D00077EA4 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 3C3045671889856D00077EA4 /* InfoPlist.strings */; };
 		3C30456B1889856D00077EA4 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 3C30456A1889856D00077EA4 /* main.m */; };
 		3C30456F1889856D00077EA4 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 3C30456E1889856D00077EA4 /* AppDelegate.m */; };
-		3C3045721889856D00077EA4 /* Main_iPhone.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3C3045701889856D00077EA4 /* Main_iPhone.storyboard */; };
-		3C3045751889856D00077EA4 /* Main_iPad.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3C3045731889856D00077EA4 /* Main_iPad.storyboard */; };
 		3C3045781889856D00077EA4 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3C3045771889856D00077EA4 /* ViewController.m */; };
 		3C30457A1889856D00077EA4 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3C3045791889856D00077EA4 /* Images.xcassets */; };
 		3C3045811889856D00077EA4 /* XCTest.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3C3045801889856D00077EA4 /* XCTest.framework */; };
@@ -24,7 +22,9 @@
 		3C30458D1889856D00077EA4 /* ABFullScrollViewControllerExampleTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 3C30458C1889856D00077EA4 /* ABFullScrollViewControllerExampleTests.m */; };
 		3C30459C1889947200077EA4 /* background@2x.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 3C30459B1889947200077EA4 /* background@2x.jpg */; };
 		3C30459E188996E700077EA4 /* background@2x~ipad.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 3C30459D188996E700077EA4 /* background@2x~ipad.jpg */; };
-		3C3045A21889A02900077EA4 /* ABFullScrollViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3C3045A11889A02900077EA4 /* ABFullScrollViewController.m */; };
+		DDA615A61AC88AE200F5146F /* ABMFullScrollBehavior.m in Sources */ = {isa = PBXBuildFile; fileRef = DDA615A31AC88AE200F5146F /* ABMFullScrollBehavior.m */; };
+		DDA615A71AC88AE200F5146F /* ABMMultiplexerProxyBehavior.m in Sources */ = {isa = PBXBuildFile; fileRef = DDA615A51AC88AE200F5146F /* ABMMultiplexerProxyBehavior.m */; };
+		DDC596F01AC6D29A00908BAE /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DDC596EF1AC6D29A00908BAE /* Main.storyboard */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -48,8 +48,6 @@
 		3C30456C1889856D00077EA4 /* ABFullScrollViewControllerExample-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "ABFullScrollViewControllerExample-Prefix.pch"; sourceTree = "<group>"; };
 		3C30456D1889856D00077EA4 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		3C30456E1889856D00077EA4 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
-		3C3045711889856D00077EA4 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main_iPhone.storyboard; sourceTree = "<group>"; };
-		3C3045741889856D00077EA4 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main_iPad.storyboard; sourceTree = "<group>"; };
 		3C3045761889856D00077EA4 /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
 		3C3045771889856D00077EA4 /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
 		3C3045791889856D00077EA4 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
@@ -60,8 +58,12 @@
 		3C30458C1889856D00077EA4 /* ABFullScrollViewControllerExampleTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ABFullScrollViewControllerExampleTests.m; sourceTree = "<group>"; };
 		3C30459B1889947200077EA4 /* background@2x.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "background@2x.jpg"; sourceTree = "<group>"; };
 		3C30459D188996E700077EA4 /* background@2x~ipad.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "background@2x~ipad.jpg"; sourceTree = "<group>"; };
-		3C3045A01889A02900077EA4 /* ABFullScrollViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ABFullScrollViewController.h; sourceTree = "<group>"; };
-		3C3045A11889A02900077EA4 /* ABFullScrollViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ABFullScrollViewController.m; sourceTree = "<group>"; };
+		DDA6159F1AC88AA200F5146F /* ABMFullScrollBehavior.podspec */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; name = ABMFullScrollBehavior.podspec; path = ../ABMFullScrollBehavior.podspec; sourceTree = "<group>"; };
+		DDA615A21AC88AE200F5146F /* ABMFullScrollBehavior.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ABMFullScrollBehavior.h; sourceTree = "<group>"; };
+		DDA615A31AC88AE200F5146F /* ABMFullScrollBehavior.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ABMFullScrollBehavior.m; sourceTree = "<group>"; };
+		DDA615A41AC88AE200F5146F /* ABMMultiplexerProxyBehavior.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ABMMultiplexerProxyBehavior.h; sourceTree = "<group>"; };
+		DDA615A51AC88AE200F5146F /* ABMMultiplexerProxyBehavior.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ABMMultiplexerProxyBehavior.m; sourceTree = "<group>"; };
+		DDC596EF1AC6D29A00908BAE /* Main.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Main.storyboard; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -91,7 +93,8 @@
 		3C3045521889856C00077EA4 = {
 			isa = PBXGroup;
 			children = (
-				3C30459F1889A02900077EA4 /* ABFullScrollViewController */,
+				DDA6159F1AC88AA200F5146F /* ABMFullScrollBehavior.podspec */,
+				DDA615A11AC88AE200F5146F /* ABMFullScrollBehavior */,
 				3C3045641889856D00077EA4 /* ABFullScrollViewControllerExample */,
 				3C3045861889856D00077EA4 /* ABFullScrollViewControllerExampleTests */,
 				3C30455D1889856D00077EA4 /* Frameworks */,
@@ -125,8 +128,7 @@
 				3C30459A1889947200077EA4 /* Assets */,
 				3C30456D1889856D00077EA4 /* AppDelegate.h */,
 				3C30456E1889856D00077EA4 /* AppDelegate.m */,
-				3C3045701889856D00077EA4 /* Main_iPhone.storyboard */,
-				3C3045731889856D00077EA4 /* Main_iPad.storyboard */,
+				DDC596EF1AC6D29A00908BAE /* Main.storyboard */,
 				3C3045761889856D00077EA4 /* ViewController.h */,
 				3C3045771889856D00077EA4 /* ViewController.m */,
 				3C3045791889856D00077EA4 /* Images.xcassets */,
@@ -173,14 +175,16 @@
 			path = Assets;
 			sourceTree = "<group>";
 		};
-		3C30459F1889A02900077EA4 /* ABFullScrollViewController */ = {
+		DDA615A11AC88AE200F5146F /* ABMFullScrollBehavior */ = {
 			isa = PBXGroup;
 			children = (
-				3C3045A01889A02900077EA4 /* ABFullScrollViewController.h */,
-				3C3045A11889A02900077EA4 /* ABFullScrollViewController.m */,
+				DDA615A21AC88AE200F5146F /* ABMFullScrollBehavior.h */,
+				DDA615A31AC88AE200F5146F /* ABMFullScrollBehavior.m */,
+				DDA615A41AC88AE200F5146F /* ABMMultiplexerProxyBehavior.h */,
+				DDA615A51AC88AE200F5146F /* ABMMultiplexerProxyBehavior.m */,
 			);
-			name = ABFullScrollViewController;
-			path = ../ABFullScrollViewController;
+			name = ABMFullScrollBehavior;
+			path = ../ABMFullScrollBehavior;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -259,9 +263,8 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				3C3045751889856D00077EA4 /* Main_iPad.storyboard in Resources */,
+				DDC596F01AC6D29A00908BAE /* Main.storyboard in Resources */,
 				3C30457A1889856D00077EA4 /* Images.xcassets in Resources */,
-				3C3045721889856D00077EA4 /* Main_iPhone.storyboard in Resources */,
 				3C30459C1889947200077EA4 /* background@2x.jpg in Resources */,
 				3C3045691889856D00077EA4 /* InfoPlist.strings in Resources */,
 				3C30459E188996E700077EA4 /* background@2x~ipad.jpg in Resources */,
@@ -283,10 +286,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				DDA615A61AC88AE200F5146F /* ABMFullScrollBehavior.m in Sources */,
+				DDA615A71AC88AE200F5146F /* ABMMultiplexerProxyBehavior.m in Sources */,
 				3C3045781889856D00077EA4 /* ViewController.m in Sources */,
 				3C30456F1889856D00077EA4 /* AppDelegate.m in Sources */,
 				3C30456B1889856D00077EA4 /* main.m in Sources */,
-				3C3045A21889A02900077EA4 /* ABFullScrollViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -315,22 +319,6 @@
 				3C3045681889856D00077EA4 /* en */,
 			);
 			name = InfoPlist.strings;
-			sourceTree = "<group>";
-		};
-		3C3045701889856D00077EA4 /* Main_iPhone.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				3C3045711889856D00077EA4 /* Base */,
-			);
-			name = Main_iPhone.storyboard;
-			sourceTree = "<group>";
-		};
-		3C3045731889856D00077EA4 /* Main_iPad.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				3C3045741889856D00077EA4 /* Base */,
-			);
-			name = Main_iPad.storyboard;
 			sourceTree = "<group>";
 		};
 		3C3045891889856D00077EA4 /* InfoPlist.strings */ = {
@@ -505,6 +493,7 @@
 				3C3045921889856D00077EA4 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		3C3045931889856D00077EA4 /* Build configuration list for PBXNativeTarget "ABFullScrollViewControllerExampleTests" */ = {
 			isa = XCConfigurationList;
@@ -513,6 +502,7 @@
 				3C3045951889856D00077EA4 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
