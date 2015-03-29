@@ -22,10 +22,9 @@
 		3C30458D1889856D00077EA4 /* ABFullScrollViewControllerExampleTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 3C30458C1889856D00077EA4 /* ABFullScrollViewControllerExampleTests.m */; };
 		3C30459C1889947200077EA4 /* background@2x.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 3C30459B1889947200077EA4 /* background@2x.jpg */; };
 		3C30459E188996E700077EA4 /* background@2x~ipad.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 3C30459D188996E700077EA4 /* background@2x~ipad.jpg */; };
-		3C3045A21889A02900077EA4 /* ABFullScrollViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3C3045A11889A02900077EA4 /* ABFullScrollViewController.m */; };
+		DDA615A61AC88AE200F5146F /* ABMFullScrollBehavior.m in Sources */ = {isa = PBXBuildFile; fileRef = DDA615A31AC88AE200F5146F /* ABMFullScrollBehavior.m */; };
+		DDA615A71AC88AE200F5146F /* ABMMultiplexerProxyBehavior.m in Sources */ = {isa = PBXBuildFile; fileRef = DDA615A51AC88AE200F5146F /* ABMMultiplexerProxyBehavior.m */; };
 		DDC596F01AC6D29A00908BAE /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DDC596EF1AC6D29A00908BAE /* Main.storyboard */; };
-		DDC596F41AC6D56800908BAE /* ABMFullScrollBehavior.m in Sources */ = {isa = PBXBuildFile; fileRef = DDC596F31AC6D56800908BAE /* ABMFullScrollBehavior.m */; };
-		DDC596F71AC6D70300908BAE /* ABMMultiplexerProxyBehavior.m in Sources */ = {isa = PBXBuildFile; fileRef = DDC596F61AC6D70300908BAE /* ABMMultiplexerProxyBehavior.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -59,13 +58,12 @@
 		3C30458C1889856D00077EA4 /* ABFullScrollViewControllerExampleTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ABFullScrollViewControllerExampleTests.m; sourceTree = "<group>"; };
 		3C30459B1889947200077EA4 /* background@2x.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "background@2x.jpg"; sourceTree = "<group>"; };
 		3C30459D188996E700077EA4 /* background@2x~ipad.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "background@2x~ipad.jpg"; sourceTree = "<group>"; };
-		3C3045A01889A02900077EA4 /* ABFullScrollViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ABFullScrollViewController.h; sourceTree = "<group>"; };
-		3C3045A11889A02900077EA4 /* ABFullScrollViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ABFullScrollViewController.m; sourceTree = "<group>"; };
+		DDA6159F1AC88AA200F5146F /* ABFullScrollViewController.podspec */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; name = ABFullScrollViewController.podspec; path = ../ABFullScrollViewController.podspec; sourceTree = "<group>"; };
+		DDA615A21AC88AE200F5146F /* ABMFullScrollBehavior.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ABMFullScrollBehavior.h; sourceTree = "<group>"; };
+		DDA615A31AC88AE200F5146F /* ABMFullScrollBehavior.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ABMFullScrollBehavior.m; sourceTree = "<group>"; };
+		DDA615A41AC88AE200F5146F /* ABMMultiplexerProxyBehavior.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ABMMultiplexerProxyBehavior.h; sourceTree = "<group>"; };
+		DDA615A51AC88AE200F5146F /* ABMMultiplexerProxyBehavior.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ABMMultiplexerProxyBehavior.m; sourceTree = "<group>"; };
 		DDC596EF1AC6D29A00908BAE /* Main.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Main.storyboard; sourceTree = "<group>"; };
-		DDC596F21AC6D56800908BAE /* ABMFullScrollBehavior.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ABMFullScrollBehavior.h; sourceTree = "<group>"; };
-		DDC596F31AC6D56800908BAE /* ABMFullScrollBehavior.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ABMFullScrollBehavior.m; sourceTree = "<group>"; };
-		DDC596F51AC6D70300908BAE /* ABMMultiplexerProxyBehavior.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ABMMultiplexerProxyBehavior.h; sourceTree = "<group>"; };
-		DDC596F61AC6D70300908BAE /* ABMMultiplexerProxyBehavior.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ABMMultiplexerProxyBehavior.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -95,8 +93,8 @@
 		3C3045521889856C00077EA4 = {
 			isa = PBXGroup;
 			children = (
-				DDC596F11AC6D54500908BAE /* ABMFullScrollBehavior */,
-				3C30459F1889A02900077EA4 /* ABFullScrollViewController */,
+				DDA6159F1AC88AA200F5146F /* ABFullScrollViewController.podspec */,
+				DDA615A11AC88AE200F5146F /* ABMFullScrollBehavior */,
 				3C3045641889856D00077EA4 /* ABFullScrollViewControllerExample */,
 				3C3045861889856D00077EA4 /* ABFullScrollViewControllerExampleTests */,
 				3C30455D1889856D00077EA4 /* Frameworks */,
@@ -177,26 +175,16 @@
 			path = Assets;
 			sourceTree = "<group>";
 		};
-		3C30459F1889A02900077EA4 /* ABFullScrollViewController */ = {
+		DDA615A11AC88AE200F5146F /* ABMFullScrollBehavior */ = {
 			isa = PBXGroup;
 			children = (
-				3C3045A01889A02900077EA4 /* ABFullScrollViewController.h */,
-				3C3045A11889A02900077EA4 /* ABFullScrollViewController.m */,
-			);
-			name = ABFullScrollViewController;
-			path = ../ABFullScrollViewController;
-			sourceTree = "<group>";
-		};
-		DDC596F11AC6D54500908BAE /* ABMFullScrollBehavior */ = {
-			isa = PBXGroup;
-			children = (
-				DDC596F21AC6D56800908BAE /* ABMFullScrollBehavior.h */,
-				DDC596F31AC6D56800908BAE /* ABMFullScrollBehavior.m */,
-				DDC596F51AC6D70300908BAE /* ABMMultiplexerProxyBehavior.h */,
-				DDC596F61AC6D70300908BAE /* ABMMultiplexerProxyBehavior.m */,
+				DDA615A21AC88AE200F5146F /* ABMFullScrollBehavior.h */,
+				DDA615A31AC88AE200F5146F /* ABMFullScrollBehavior.m */,
+				DDA615A41AC88AE200F5146F /* ABMMultiplexerProxyBehavior.h */,
+				DDA615A51AC88AE200F5146F /* ABMMultiplexerProxyBehavior.m */,
 			);
 			name = ABMFullScrollBehavior;
-			path = ../ABFullScrollBehavior;
+			path = ../ABMFullScrollBehavior;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -298,12 +286,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				DDA615A61AC88AE200F5146F /* ABMFullScrollBehavior.m in Sources */,
+				DDA615A71AC88AE200F5146F /* ABMMultiplexerProxyBehavior.m in Sources */,
 				3C3045781889856D00077EA4 /* ViewController.m in Sources */,
-				DDC596F41AC6D56800908BAE /* ABMFullScrollBehavior.m in Sources */,
-				DDC596F71AC6D70300908BAE /* ABMMultiplexerProxyBehavior.m in Sources */,
 				3C30456F1889856D00077EA4 /* AppDelegate.m in Sources */,
 				3C30456B1889856D00077EA4 /* main.m in Sources */,
-				3C3045A21889A02900077EA4 /* ABFullScrollViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
