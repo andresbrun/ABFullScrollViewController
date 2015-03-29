@@ -1,5 +1,3 @@
-ABFullScrollViewController
-==========================
 [![License MIT](https://go-shields.herokuapp.com/license-MIT-blue.png)](https://github.com/andresbrun/ABFullScrollViewController/blob/master/LICENSE)
 [![Build Status](https://travis-ci.org/andresbrun/ABFullScrollViewController.png?branch=master)](https://github.com/andresbrun/ABFullScrollViewController)
 [![Build Platform](https://cocoapod-badges.herokuapp.com/p/ABFullScrollViewController/badge.png)](https://github.com/andresbrun/ABFullScrollViewController)
@@ -93,4 +91,4 @@ Let's do an small summarize of how is design all the connections between the dif
 
 ## License
 
-ABFullScrollViewController is available under the MIT license. See the LICENSE file for more info.
+ABMFullScrollBehavior is available under the MIT license. See the LICENSE file for more info.
