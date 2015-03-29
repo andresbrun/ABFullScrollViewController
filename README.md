@@ -5,6 +5,8 @@ ABFullScrollViewController
 [![Build Platform](https://cocoapod-badges.herokuapp.com/p/ABFullScrollViewController/badge.png)](https://github.com/andresbrun/ABFullScrollViewController)
 [![Build Version](https://cocoapod-badges.herokuapp.com/v/ABFullScrollViewController/badge.png)](https://github.com/andresbrun/ABFullScrollViewController)
 
+![alt tag](https://raw.githubusercontent.com/andresbrun/ABFullScrollViewController/master/ABFullScrollViewControllerExample/Demo/ABMFullScroll_logo.png)
+
 Component that provide the behavior of hidding a header view while the user makes scroll. It is inspiring in Facebook table scroll style. For sake of simplicity this component follows `Behavioral Object Pattern` [Objc.io](http://www.objc.io/issue-13/behaviors.html).
 
 ### Installation with CocoaPods
