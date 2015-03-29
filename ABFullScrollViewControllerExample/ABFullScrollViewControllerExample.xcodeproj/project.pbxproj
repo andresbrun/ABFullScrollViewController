@@ -58,7 +58,7 @@
 		3C30458C1889856D00077EA4 /* ABFullScrollViewControllerExampleTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ABFullScrollViewControllerExampleTests.m; sourceTree = "<group>"; };
 		3C30459B1889947200077EA4 /* background@2x.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "background@2x.jpg"; sourceTree = "<group>"; };
 		3C30459D188996E700077EA4 /* background@2x~ipad.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "background@2x~ipad.jpg"; sourceTree = "<group>"; };
-		DDA6159F1AC88AA200F5146F /* ABFullScrollViewController.podspec */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; name = ABFullScrollViewController.podspec; path = ../ABFullScrollViewController.podspec; sourceTree = "<group>"; };
+		DDA6159F1AC88AA200F5146F /* ABMFullScrollBehavior.podspec */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; name = ABMFullScrollBehavior.podspec; path = ../ABMFullScrollBehavior.podspec; sourceTree = "<group>"; };
 		DDA615A21AC88AE200F5146F /* ABMFullScrollBehavior.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ABMFullScrollBehavior.h; sourceTree = "<group>"; };
 		DDA615A31AC88AE200F5146F /* ABMFullScrollBehavior.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ABMFullScrollBehavior.m; sourceTree = "<group>"; };
 		DDA615A41AC88AE200F5146F /* ABMMultiplexerProxyBehavior.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ABMMultiplexerProxyBehavior.h; sourceTree = "<group>"; };
@@ -93,7 +93,7 @@
 		3C3045521889856C00077EA4 = {
 			isa = PBXGroup;
 			children = (
-				DDA6159F1AC88AA200F5146F /* ABFullScrollViewController.podspec */,
+				DDA6159F1AC88AA200F5146F /* ABMFullScrollBehavior.podspec */,
 				DDA615A11AC88AE200F5146F /* ABMFullScrollBehavior */,
 				3C3045641889856D00077EA4 /* ABFullScrollViewControllerExample */,
 				3C3045861889856D00077EA4 /* ABFullScrollViewControllerExampleTests */,
